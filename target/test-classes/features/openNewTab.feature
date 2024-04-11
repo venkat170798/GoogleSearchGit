@@ -1,21 +1,8 @@
 Feature: Open New tab and search
 
+@NewTab
   Scenario Outline: Open new tab and search for apple website
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
-
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+    Given I want to open new tab
+    When search for Apple and click on the website
+    Then Validate Apple home page is lauched
+    And Verify the old and new url is same
