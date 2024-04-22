@@ -6,7 +6,7 @@ public class PageObjectManager {
 	
 	public WebDriver driver;
 	public IplHomePage iplhomepage;
-	public OpenNewTab opennewtab;
+	public OpenUdemy openudemy;
 	
 	
 	public PageObjectManager(WebDriver driver)
@@ -20,10 +20,10 @@ public class PageObjectManager {
 		return iplhomepage;
 	}
 	
-	public OpenNewTab openNewTab()
+	public OpenUdemy openUdemy()
 	{
-		opennewtab=new OpenNewTab(driver);
-		return opennewtab;
+		openudemy=new OpenUdemy(driver);
+		return openudemy;
 	}
 
 }

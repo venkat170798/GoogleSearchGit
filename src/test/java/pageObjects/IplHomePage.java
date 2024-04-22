@@ -13,7 +13,7 @@ public class IplHomePage {
 		}
 
 		By search_google = By.xpath("//textarea[@id='APjFqb']");
-		By select_ipl_page = By.xpath("//h3[normalize-space()='t IPL']");
+		By select_ipl_page = By.xpath("//h3[normalize-space()='Indian Premier League Official Website -2024']");
 		By select_fan_poll = By.xpath("//img[@src=\"https://www.iplt20.com/assets/images/fan-poll.svg\"]");
 		
 		public void searchUrl()
@@ -39,9 +39,9 @@ public class IplHomePage {
 			return driver.getCurrentUrl();
 		}
 		
-		public void hitURL(String secondurl)
+		public void hitURL(String openNewTab)
 		{
-			driver.get(secondurl);
+			driver.get(openNewTab);
 		}
 		
 }

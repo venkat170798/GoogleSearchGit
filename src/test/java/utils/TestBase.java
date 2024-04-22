@@ -27,12 +27,14 @@ public class TestBase {
 		prop.load(fis);
 		String URL = prop.getProperty("GoogleURL");
 		String URL2 = prop.getProperty("URL2");
+		String Udemy = prop.getProperty("UdemyUrl");
 		
 		if(driver== null)
 		{
 		System.setProperty("webdriver.edge.driver", "C:/Users/vnkt5/Downloads/edgedriver_win64/msedgedriver.exe");
 		driver = new EdgeDriver();
 		driver.get(URL);
+		driver.get(Udemy);
 		}
 		return driver;
 		

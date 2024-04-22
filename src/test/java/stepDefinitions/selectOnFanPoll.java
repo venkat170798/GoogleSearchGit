@@ -33,12 +33,20 @@ public selectOnFanPoll(TestContextSetup globalVariable)
 		System.out.println(URL1);
 
 		//globalVariable.driver.switchTo().newWindow(WindowType.TAB);
-		//globalVariable.genericUtils.openNewTab();
+		globalVariable.genericUtils.openNewTab();
 		//globalVariable.driver.get("https://www.apple.com/in/");
 		//globalVariable.testBase.secondURL();
-	/*	iplhomepage.hitURL(globalVariable.testBase.secondURL());
+		iplhomepage.hitURL(globalVariable.testBase.secondURL());
 		String URL2 = iplhomepage.getcurrentUrl();
-		System.out.println(URL2); */
+		System.out.println(URL2);
+		if(URL1 == URL2)
+		{
+			System.out.println("Test case failed");
+		}
+		else
+		{
+			System.out.println("Test case passed");
+		}
 		}
 
 }
