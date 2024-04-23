@@ -11,6 +11,7 @@ public class TestBase {
 	
 	public WebDriver driver;
 	
+	
 	public String secondURL() throws IOException
 	{
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//global.properties");
@@ -19,6 +20,7 @@ public class TestBase {
 		String URL2 = prop.getProperty("URL2");
 		return URL2;
 	}
+	
 	
 	public WebDriver WebDriverManager() throws IOException
 	{
@@ -29,19 +31,20 @@ public class TestBase {
 		String URL2 = prop.getProperty("URL2");
 		String Udemy = prop.getProperty("UdemyUrl");
 		
+		
 		if(driver== null)
 		{
 		System.setProperty("webdriver.edge.driver", "C:/Users/vnkt5/Downloads/edgedriver_win64/msedgedriver.exe");
 		driver = new EdgeDriver();
 		driver.get(URL);
-		driver.get(Udemy);
+		//driver.get(Udemy);
+		driver.manage().window().maximize();
 		}
-		return driver;
-		
-	
 		
 
+		return driver;
 		
 	}
+
 
 }
